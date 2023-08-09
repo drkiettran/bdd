@@ -1,8 +1,7 @@
-Feature: Searching for text at a google search website
+Feature: Log Retention Period check
 
-  Scenario: Searching for random text
-    Given I am at a designated google website "https://google.com" ... passed in 4.020s
-    When I search for "selenium webdriver" ... passed in 6.543s
-    Then I should see a list of "1" or more search results ... passed in 3.040s
-    And the headline should be "WebDriver" ... passed in 0.001s
+  Scenario: Verify log rention period is provisioned correctly
+    Given I have a log group "my-log-group-2" retention policy ... passed in 0.001s
+    When I retrieve the rention policy ... passed in 0.000s
+    Then I should see that the retention in days is set to 30 ... passed in 0.000s
 
