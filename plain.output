@@ -1,0 +1,8 @@
+Feature: Searching for text at a google search website
+
+  Scenario: Searching for random text
+    Given I am at a designated google website "https://google.com" ... passed in 4.020s
+    When I search for "selenium webdriver" ... passed in 6.543s
+    Then I should see a list of "1" or more search results ... passed in 3.040s
+    And the headline should be "WebDriver" ... passed in 0.001s
+
